@@ -1,0 +1,346 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0a0d18;
+    color:#fff;
+    text-align:center;
+}
+
+.lang-switch{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:999;
+}
+.lang-switch button{
+    background:gold;
+    border:none;
+    padding:6px 12px;
+    margin:2px;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+.hero{
+    height:100vh;
+    background:url('images/hero.jpg') center/cover;
+    position:relative;
+}
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.65);
+}
+.hero-content{
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+h1{
+    font-family:'Playfair Display',serif;
+    font-size:70px;
+}
+
+.section{
+    padding:90px 10%;
+}
+.dark{background:#11162b}
+
+.section-title{
+    font-family:'Playfair Display',serif;
+    font-size:36px;
+    margin-bottom:50px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:rgb(14, 11, 26);
+    border-radius:18px;
+    padding:20px;
+    transition:.5s;
+    cursor:pointer;
+}
+.card:hover{
+    transform:translateY(-15px) scale(1.03);
+    box-shadow:0 0 40px gold;
+}
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.small .card{padding:30px}
+
+.text{
+    max-width:900px;
+    margin:auto;
+    line-height:1.8;
+}
+
+iframe{
+    width:100%;
+    height:350px;
+    margin-top:30px;
+    border:none;
+    border-radius:15px;
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+}
+.modal-content{
+    background:#242424;
+    width:90%;
+    max-width:420px;
+    margin:8% auto;
+    padding:30px;
+    border-radius:15px;
+}
+.modal-content input,select,button{
+    width:100%;
+    padding:12px;
+    margin:8px 0;
+    border:none;
+    border-radius:8px;
+}
+button{
+    background:gold;
+    cursor:pointer;
+}
+.close{
+    position:absolute;
+    top:15px;
+    right:20px;
+    cursor:pointer;
+}
+/* =========================
+   MOBILE ADAPTATION
+   ========================= */
+@media (max-width: 768px) {
+
+body {
+    transform: none !important;
+}
+
+  h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  .section {
+    padding: 60px 6%;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .card img {
+    height: 160px;
+  }
+
+  .hero {
+    height: 90vh;
+  }
+
+  .hero-content {
+    padding: 0 10px;
+  }
+
+  .modal-content {
+    width: 92%;
+    margin-top: 15%;
+    padding: 22px;
+  }
+
+  iframe {
+    height: 260px;
+  }
+
+  .lang-switch {
+    top: 10px;
+    right: 10px;
+  }
+
+  .lang-switch button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+/* ROYAL AUTO PREMIUM TITLE */
+.hero h1 {
+  color: #d4af37; /* lux gold */
+  text-shadow: 
+    0 0 10px rgba(212, 175, 55, 0.6),
+    0 0 25px rgba(212, 175, 55, 0.4);
+  animation: royalGlow 3s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes royalGlow {
+  0% {
+    opacity: 0.85;
+    text-shadow:
+      0 0 8px rgba(212, 175, 55, 0.4),
+      0 0 20px rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    opacity: 1;
+    text-shadow:
+      0 0 18px rgba(212, 175, 55, 0.9),
+      0 0 40px rgba(212, 175, 55, 0.7);
+  }
+  100% {
+    opacity: 0.85;
+    text-shadow:
+      0 0 8px rgba(212, 175, 55, 0.4),
+      0 0 20px rgba(212, 175, 55, 0.3);
+  }
+}
+.lang-switch {
+    position: fixed;       /* экранда қатып тұрады */
+    top: 20px;             /* жоғарыдан арақашықтық */
+    right: 20px;           /* оң жақта */
+    z-index: 9999;         /* бәрінен үстінде */
+    display: flex;
+    gap: 8px;
+}
+
+.lang-switch {
+    position: fixed;      /* ҚАТЫП ТҰРАДЫ */
+    top: 15px;            /* Үстінде */
+    right: 15px;          /* Оң жақта */
+    z-index: 10000;       /* Бәрінен үстінде */
+}
+
+.lang-switch button {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.back-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid #aaa;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.back-btn:hover {
+    background: rgba(255,255,255,0.1);
+}
+/* =========================
+   Қызмет бағаларының алтын стилі
+   ========================= */
+.card .price {
+    color: #d4af37; /* Royal Auto lux gold */
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.card:hover .price {
+    color: #ffe066; /* ашық алтын түс */
+    text-shadow:
+        0 0 5px #d4af37,
+        0 0 15px #d4af37,
+        0 0 25px #ffd700;
+    transform: scale(1.05);
+}
+/* =========================
+   Қызмет бағаларының алтын стилі
+   ========================= */
+.card .price {
+    color: #d4af37; /* Royal Auto lux gold */
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.card:hover .price {
+    color: #ffe066; /* ашық алтын түс */
+    text-shadow:
+        0 0 5px #d4af37,
+        0 0 15px #d4af37,
+        0 0 25px #ffd700;
+    transform: scale(1.05);
+}
+/* Қызмет карточкасы */
+.card {
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Қызмет атауы */
+.card h3 {
+    font-size: 1.2rem;
+    color: #FFFFFF; /* ақ түс */
+    animation: glowTitle 2s infinite alternate;
+}
+
+/* Жұмсақ жарқырау анимациясы (ақ жұмыс атауы үшін) */
+@keyframes glowTitle {
+    0% {
+        text-shadow: 0 0 5px #FFFFFF, 0 0 10px #FFFFFF;
+    }
+    50% {
+        text-shadow: 0 0 10px #AAAAAA, 0 0 20px #AAAAAA;
+    }
+    100% {
+        text-shadow: 0 0 15px #FFFFFF, 0 0 30px #FFFFFF;
+    }
+}
+
+/* Қызмет бағасы */
+.card p {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #FFD700; /* сары түс */
+}
+.back-btn {
+    background-color: #f0f0f0; /* сұр немесе қалаған түс */
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #ddd;
+}
+
